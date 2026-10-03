@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff5a36">
+
+    <title>Login</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="login-page">
+
+    <div class="login-card">
+
+        <!-- =====================================================
+             ALERT (общая ошибка)
+        ===================================================== -->
+
+        <div class="login-alert" id="loginAlert" role="alert">
+
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span id="loginAlertText">Xəta</span>
+
+        </div>
+
+
+        <!-- =====================================================
+             FORM
+        ===================================================== -->
+
+        <form class="login-form"
+              id="loginForm"
+              novalidate
+              autocomplete="on">
+
+            <!-- EMAIL -->
+
+            <div class="form-group" id="groupEmail">
+
+                <label class="form-label" for="email">
+                    E-poçt
+                </label>
+
+                <div class="form-control">
+
+                    <i class="fa-regular fa-envelope form-icon"></i>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-input"
+                        placeholder="email@gmail.com"
+                        autocomplete="username"
+                        spellcheck="false"
+                        required>
+
+                </div>
+
+                <span class="form-error" id="emailError"></span>
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="form-group" id="groupPassword">
+
+                <label class="form-label" for="password">
+                    Şifrə
+                </label>
+
+                <div class="form-control">
+
+                    <i class="fa-solid fa-lock form-icon"></i>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        class="form-input"
+                        placeholder="••••••••"
+                        autocomplete="current-password"
+                        required>
+
+                    <button type="button"
+                            class="toggle-password"
+                            id="togglePassword"
+                            tabindex="-1"
+                            aria-label="Şifrəni göstər">
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+
+                </div>
+
+                <span class="form-error" id="passwordError"></span>
+
+            </div>
+
+            <!-- SUBMIT -->
+
+            <button type="submit"
+                    class="login-btn"
+                    id="loginBtn">
+
+                <span class="login-btn-text">Daxil ol</span>
+
+                <span class="login-btn-loader">
+                    <i class="fa-solid fa-circle-notch fa-spin"></i>
+                </span>
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
